@@ -1,0 +1,13 @@
+apiVersion: skaffold/v2beta8
+kind: Config
+metadata:
+  name: kubernetes-
+build:
+  artifacts:
+  - image: volta854/otus
+deploy:
+  kubectl:
+    manifests:
+    - deployment.yaml
+    - ingress.yaml
+    - service.yaml
